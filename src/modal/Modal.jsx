@@ -44,7 +44,7 @@ function Modal({onClose, visible, selectedNft, owner}) {
             {/* MODAL HEADER */}
             <div className="flex justify-between items center border-b border-gray-200 py-3">
                 <div className="flex items-center justify-center">
-                    <p className="text-xl font-bold text-gray-800">name</p>
+                    <p className="text-xl font-bold text-gray-800">{selectedNft.name}</p>
                 </div>
 
                 <button 
@@ -71,7 +71,7 @@ function Modal({onClose, visible, selectedNft, owner}) {
                         <h1 className="text-lg text-center text-gray-700"> {selectedNft.name}</h1>
                         <h3 className="text-sm text-center text-gray-500 ">creator- {selectedNft?.collectionAddress.substring(0,5)}...{selectedNft?.collectionAddress.substring(selectedNft?.collectionAddress.length - 5)} </h3>
                         <div className='flex mt-4 justify-center border-t-2 border-b-2'>
-                            <h1 className='text-bold text-md tracking-wider'>{owner}</h1>
+                            <h1 className='text-bold text-sm tracking-wider'>{owner}</h1>
                         </div>
                         <p className="text-md text-center text-gray-700 mt-4"> {selectedNft.description}</p>
                         {/* Owner address */}
